@@ -1,0 +1,129 @@
+version=1
+id=2981571303
+title=Definitive Zombies
+description=[h1]Prioritised Releases[/h1]
+description=1) Proper descriptions for tooltips
+description=2) Climate State: Time decay, the number of days will now affect zombies
+description=3) Add Speech for climates that are not easily observable in the game
+description=
+description=[h1]What is this mod?[/h1]
+description=This mod seeks to combine the multitude of Zombie mods into one cohesive package. If you prefer how another mod handles a zombie's stat. You can easily disable it in Definitive Zombies and let your desired mod handle the zombie stat!
+description=
+description=[h1]What does this mod do?[/h1]
+description=Nothing really, It is up to you to customise it your way. That being said, this mod comes with a preset which makes zombies more "realistic".
+description=
+description=Strong sunlight gives them eagle eye and the brightness makes it easier for the zombies to track the player; zombie memory is improved.
+description=
+description=When night comes, zombies become blind and easily lose track of the player; shorter memory. However, zombies develop pinpoint hearing as a result.
+description=
+description=Zombies are fast shamblers when the temperature is warm. As the weather gets colder, they become slow shamblers. They will try to pursue the player for longer periods to compensate for their slower speed. Zombies become tougher as well.
+description=
+description=Fog now affects zombies as well. Their vision becomes worse as the fog thickens. They also lose track of the player more easily.
+description=
+description=Rain impairs the zombies sight and hearing, as the rain progresses from a drizzle into an outright downpour, they become completely blind and deaf, they also lose the ability to track the player once line of sight is broken.
+description=
+description=Snow works similarly to rain. The only difference is that it only affects the zombies'sight. Zombies lose the ability to track players if it snows heavily enough.
+description=
+description=A cloudless sky does nothing to the zombies. However, as the sky becomes overcast, it slightly lowers the zombie's sight and ability to track the player.
+description=
+description=Wind affects the hearing ability of the zombies, a simple breeze might not affect their hearing, but a gale will completely deafen them.
+description=
+description=As the moon phases slowly progresses, penalties to the zombies sight slowly diminish until they can see just as clearly as in the day.
+description=
+description=
+description=[h1]I want to customise the zombies my way, how do I do it?[/h1]
+description=First we need to understand how data is kept and read, Using zombie speed as an example, each zombie state corresponds to a number, the "strongest" state would often be a value of 1
+description=
+description=Sprinter = 1
+description=Fast Shambler = 2
+description=Slow Shambler = 3
+description=
+description=Using the default settings, the zombies speed is a fast shambler, which is stage 2.
+description=
+description=We will use default settings for temperature as this is the weather which mainly modifies zombie speeds.
+description=
+description=Temperature interval 0 = -200
+description=Speed effect = Decrease by 2 stages
+description=
+description=Temperature interval 1 = 0
+description=Speed effect = Decrease by 1 stages
+description=
+description=Temperature interval 2 = 10
+description=Speed effect = Nothing
+description=
+description=When the temperature is -10 degrees, the zombie loses 2 stages in speed. This will make our Zombies speed stage go from 2 to 4. However, since the maximum stage for speed is 3, stage 4 gets clamped down to stage 3 which causes it to become a slow shambler.
+description=
+description=When the temperature is 5 degrees, zombies loses 1 stage in speed. This will make our Zombies speed stage go from 2 to 3, which causes it to become a slow shambler.
+description=
+description=When the temperature is 16 degrees, there is no change to the zombies state. Zombies will remain as a fast shambler.
+description=
+description=Note that if for whatever reason the temperature went below -200(-80 is the lowest it can go), There will be no change to the zombie state. If the stage becomes smaller than 1(eg. 0, -1), the stage value gets clamped back to 1
+description=
+description=We will now introduce the full moon. When the full moon is in effect, it will increase the zombie's speed  by 1 stage (this is not a preset behaviour),  when this interacts with the temperature, these are the results:
+description=
+description=When the temperature is -10 degrees and on a full moon, zombies loses 1 stages in speed. This will make our zombies speed go from stage 2 to stage 3, which causes it to become a slow shambler.
+description=
+description=When the temperature is 5 degrees and on a full moon, there is no change to the zombies state. Zombies will remain as a fast shambler.
+description=
+description=When the temperature is 16 and on a full moon, zombies gain 1 stage in speed. This will make our zombies speed go from stage 2 to stage 1, which causes it to become a sprinter.
+description=
+description=[h1]How do I randomise my zombies?[/h1]
+description=1) Enable the zombie stat you want to be randomised. (If you disabled the main stat, this will not work)
+description=2) Adjust the weights for the seed. The values you use will be normalised, meaning if you put 100.0 in all the weights, they will all have 25% chance to apply their effect
+description=3) Adjust the effect the seed will have on the zombie.
+description=
+description=
+description=[h1]Help Zombie stats are not changing?[/h1]
+description=Weather values are calculated every 10mins, if the weather changed before/after the 10min tick. You will need to wait for the next 10 min tick.
+description=
+description=There is also another delay after the 10 min tick where the zombie states are updated. This delay can be shortened by using smaller numbers for the "Update Interval" and "Update Reroll" (You will need a strong machine for this)
+description=
+description=The value used in the weather intervals should be in ascending order, setting values like the following will cause issues:
+description=Temperature interval 0 = 0
+description=Temperature interval 1 = -200
+description=Temperature interval 2 = 10
+description=
+description=[h1]Help Zombie are not keeping their randomised stats between sessions![/h1]
+description=This is due to the limits of the game engine, the game is very aggressive in pruning zombie data and hence they are not saved between sessions. Dedicated servers who do not reset should have no issue with this as the data is pruned only when the game closes. 
+description=
+description=Thanks to Albion from the PZ discord for helping me figure out why this was happening.
+description=
+description=[h1]Compatability[/h1]
+description=[b]Compatible[/b]
+description=Braven's Camouflage
+description=Horde Night
+description=Here They Come!
+description=Please Don't Feed The Zombies
+description=Random Rally
+description=Calm Before The Storm
+description=Fear The Sun
+description=
+description=[b]Partial Compatible (Decide which mods affects the zombie stats)[/b]
+description=Under Cover of Darkness
+description=Disable "Enable Sight" on Definitive Zombies
+description=
+description=Random Zombies
+description=If you want the "speed" settings from random zombies, disable "Enable Speed" on Definitive Zombies
+description=If you modify "fragile" and "tough" from random zombies, disable "Enable Toughness" on Definitive Zombies
+description=If you modify "smart" on random zombies, disable "Enable Cognition" on Definitive Zombies
+description=
+description=[b]Incompatible[/b]
+description=Persistent Zombies
+description=CDDA Zombies
+description=
+description=[h1]Bugs?[/h1]
+description=[b]Have an issue? Follow these steps to report. I can't do anything if the post just contains "This is not working".[/b]
+description=1) What were you trying to make the zombie do? (eg. zombies become sprinters in the rain, zombies open doors at night, etc.)
+description=2) Turn on "Enable Debug" on the "[DZ] Definitive Zombies" page (Singleplayers need a mod like "Change Sandbox Options" to turn it on)
+description=3) Restart the server/game, this is so the changes can take effect.
+description=4) Run the game for 10 in-game minutes(you can fast forward), this will print out a report into the log which I can use to debug.
+description=5) Open and copy the text inside "C:\Users\<USER>\Zomboid\console.txt" or your zomboid save file location equivalent
+description=6) Paste the text inside Git or Pastebin and send me the link.
+description=7) Any red errors that appear and unsure if it is from the mod? Send them as well.
+description=
+description=
+description=
+description=Workshop ID: 2981571303
+description=Mod ID: DefinitiveZombies
+tags=Build 41;Balance;Hardmode;Realistic
+visibility=public

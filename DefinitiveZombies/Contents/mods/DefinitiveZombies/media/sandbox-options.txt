@@ -1,0 +1,3244 @@
+VERSION = 1,
+
+option DefinitiveZombies.DebugEnable {
+    type = boolean,
+    default = false,
+    page = DefinitiveZombies_MainPage,
+    translation = DefinitiveZombies_DebugEnable,
+}
+
+option DefinitiveZombies.UpdateInterval {
+    type = integer,
+    min = 100,
+    max = 10000,
+    default = 300,
+    page = DefinitiveZombies_MainPage,
+    translation = DefinitiveZombies_UpdateInterval,
+}
+
+option DefinitiveZombies.RerollAttempts {
+    type = integer,
+    min = 0,
+    max = 10,
+    default = 3,
+    page = DefinitiveZombies_MainPage,
+    translation = DefinitiveZombies_UpdateReroll,
+}
+
+option DefinitiveZombies.SpeedEnable {
+    type = boolean,
+    default = True,
+    page = DefinitiveZombies_MainPage,
+    translation = DefinitiveZombies_SpeedEnable,
+}
+
+option DefinitiveZombies.Speed {
+    type = enum,
+    numValues = 3,
+    default = 2,
+    page = DefinitiveZombies_MainPage,
+    translation = DefinitiveZombies_BaselineSpeed,
+    valueTranslation = ZSpeed,
+}
+
+option DefinitiveZombies.StrengthEnable {
+    type = boolean,
+    default = True,
+    page = DefinitiveZombies_MainPage,
+    translation = DefinitiveZombies_StrengthEnable,
+}
+
+option DefinitiveZombies.Strength {
+    type = enum,
+    numValues = 3,
+    default = 2,
+    page = DefinitiveZombies_MainPage,
+    translation = DefinitiveZombies_BaselineStrength,
+    valueTranslation = ZStrength,
+}
+
+option DefinitiveZombies.ToughnessEnable {
+    type = boolean,
+    default = True,
+    page = DefinitiveZombies_MainPage,
+    translation = DefinitiveZombies_ToughnessEnable,
+}
+
+option DefinitiveZombies.Toughness {
+    type = enum,
+    numValues = 3,
+    default = 2,
+    page = DefinitiveZombies_MainPage,
+    translation = DefinitiveZombies_BaselineToughness,
+    valueTranslation = ZToughness,
+}
+
+
+option DefinitiveZombies.CognitionEnable {
+    type = boolean,
+    default = True,
+    page = DefinitiveZombies_MainPage,
+    translation = DefinitiveZombies_CognitionEnable,
+}
+
+option DefinitiveZombies.Cognition {
+    type = enum,
+    numValues = 3,
+    default = 3,
+    page = DefinitiveZombies_MainPage,
+    translation = DefinitiveZombies_BaselineCognition,
+    valueTranslation = ZCognition,
+}
+
+option DefinitiveZombies.MemoryEnable {
+    type = boolean,
+    default = True,
+    page = DefinitiveZombies_MainPage,
+    translation = DefinitiveZombies_MemoryEnable,
+}
+
+option DefinitiveZombies.Memory {
+    type = enum,
+    numValues = 4,
+    default = 2,
+    page = DefinitiveZombies_MainPage,
+    translation = DefinitiveZombies_BaselineMemory,
+    valueTranslation = ZMemory,
+}
+
+
+option DefinitiveZombies.SightEnable {
+    type = boolean,
+    default = True,
+    page = DefinitiveZombies_MainPage,
+    translation = DefinitiveZombies_SightEnable,
+}
+
+option DefinitiveZombies.Sight {
+    type = enum,
+    numValues = 3,
+    default = 2,
+    page = DefinitiveZombies_MainPage,
+    translation = DefinitiveZombies_BaselineSight,
+    valueTranslation = ZSight,
+}
+
+option DefinitiveZombies.HearingEnable {
+    type = boolean,
+    default = True,
+    page = DefinitiveZombies_MainPage,
+    translation = DefinitiveZombies_HearingEnable,
+}
+
+option DefinitiveZombies.Hearing {
+    type = enum,
+    numValues = 3,
+    default = 2,
+    page = DefinitiveZombies_MainPage,
+    translation = DefinitiveZombies_BaselineHearing,
+    valueTranslation = ZHearing,
+}
+
+
+option DefinitiveZombies.DayLightEnable {
+    type = boolean,
+    default = true,
+    page = DefinitiveZombies_DaylightPage,
+    translation = DefinitiveZombies_DayLightEnable,
+}
+
+option DefinitiveZombies.DayLight_Interval0 {
+    type = double,
+    min = 0.01,
+    max = 0.99,
+    default = 0.25,
+    page = DefinitiveZombies_DaylightPage,
+    translation = DefinitiveZombies_DayLightInterval0,
+}
+
+option DefinitiveZombies.DayLight_Effect0_Speed {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_DaylightPage,
+    translation = DefinitiveZombies_SpeedEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.DayLight_Effect0_Strength {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_DaylightPage,
+    translation = DefinitiveZombies_StrengthEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.DayLight_Effect0_Toughness {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_DaylightPage,
+    translation = DefinitiveZombies_ToughnessEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.DayLight_Effect0_Cognition {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_DaylightPage,
+    translation = DefinitiveZombies_CognitionEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.DayLight_Effect0_Memory {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_DaylightPage,
+    translation = DefinitiveZombies_MemoryEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.DayLight_Effect0_Sight {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_DaylightPage,
+    translation = DefinitiveZombies_SightEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.DayLight_Effect0_Hearing {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_DaylightPage,
+    translation = DefinitiveZombies_HearingEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.DayLight_Interval1 {
+    type = double,
+    min = 0.01,
+    max = 0.99,
+    default = 0.50,
+    page = DefinitiveZombies_DaylightPage,
+    translation = DefinitiveZombies_DayLightInterval1,
+}
+
+option DefinitiveZombies.DayLight_Effect1_Speed {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_DaylightPage,
+    translation = DefinitiveZombies_SpeedEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.DayLight_Effect1_Strength {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_DaylightPage,
+    translation = DefinitiveZombies_StrengthEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.DayLight_Effect1_Toughness {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_DaylightPage,
+    translation = DefinitiveZombies_ToughnessEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.DayLight_Effect1_Cognition {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_DaylightPage,
+    translation = DefinitiveZombies_CognitionEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.DayLight_Effect1_Memory {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_DaylightPage,
+    translation = DefinitiveZombies_MemoryEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.DayLight_Effect1_Sight {
+    type = enum,
+    numValues = 11,
+    default = 5,
+    page = DefinitiveZombies_DaylightPage,
+    translation = DefinitiveZombies_SightEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.DayLight_Effect1_Hearing {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_DaylightPage,
+    translation = DefinitiveZombies_HearingEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.DayLight_Interval2 {
+    type = double,
+    min = 0.01,
+    max = 0.99,
+    default = 0.75,
+    page = DefinitiveZombies_DaylightPage,
+    translation = DefinitiveZombies_DayLightInterval2,
+}
+
+option DefinitiveZombies.DayLight_Effect2_Speed {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_DaylightPage,
+    translation = DefinitiveZombies_SpeedEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.DayLight_Effect2_Strength {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_DaylightPage,
+    translation = DefinitiveZombies_StrengthEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.DayLight_Effect2_Toughness {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_DaylightPage,
+    translation = DefinitiveZombies_ToughnessEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.DayLight_Effect2_Cognition {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_DaylightPage,
+    translation = DefinitiveZombies_CognitionEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.DayLight_Effect2_Memory {
+    type = enum,
+    numValues = 11,
+    default = 5,
+    page = DefinitiveZombies_DaylightPage,
+    translation = DefinitiveZombies_MemoryEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.DayLight_Effect2_Sight {
+    type = enum,
+    numValues = 11,
+    default = 5,
+    page = DefinitiveZombies_DaylightPage,
+    translation = DefinitiveZombies_SightEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.DayLight_Effect2_Hearing {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_DaylightPage,
+    translation = DefinitiveZombies_HearingEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+
+
+option DefinitiveZombies.NightEnable {
+    type = boolean,
+    default = true,
+    page = DefinitiveZombies_NightPage,
+    translation = DefinitiveZombies_NightEnable,
+}
+
+option DefinitiveZombies.Night_Interval0 {
+    type = double,
+    min = 0.01,
+    max = 0.99,
+    default = 0.25,
+    page = DefinitiveZombies_NightPage,
+    translation = DefinitiveZombies_NightInterval0,
+}
+
+option DefinitiveZombies.Night_Effect0_Speed {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_NightPage,
+    translation = DefinitiveZombies_SpeedEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Night_Effect0_Strength {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_NightPage,
+    translation = DefinitiveZombies_StrengthEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Night_Effect0_Toughness {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_NightPage,
+    translation = DefinitiveZombies_ToughnessEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Night_Effect0_Cognition {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_NightPage,
+    translation = DefinitiveZombies_CognitionEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Night_Effect0_Memory {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_NightPage,
+    translation = DefinitiveZombies_MemoryEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Night_Effect0_Sight {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_NightPage,
+    translation = DefinitiveZombies_SightEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Night_Effect0_Hearing {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_NightPage,
+    translation = DefinitiveZombies_HearingEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Night_Interval1 {
+    type = double,
+    min = 0.01,
+    max = 0.99,
+    default = 0.50,
+    page = DefinitiveZombies_NightPage,
+    translation = DefinitiveZombies_NightInterval1,
+}
+
+option DefinitiveZombies.Night_Effect1_Speed {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_NightPage,
+    translation = DefinitiveZombies_SpeedEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Night_Effect1_Strength {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_NightPage,
+    translation = DefinitiveZombies_StrengthEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Night_Effect1_Toughness {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_NightPage,
+    translation = DefinitiveZombies_ToughnessEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Night_Effect1_Cognition {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_NightPage,
+    translation = DefinitiveZombies_CognitionEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Night_Effect1_Memory {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_NightPage,
+    translation = DefinitiveZombies_MemoryEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Night_Effect1_Sight {
+    type = enum,
+    numValues = 11,
+    default = 7,
+    page = DefinitiveZombies_NightPage,
+    translation = DefinitiveZombies_SightEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Night_Effect1_Hearing {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_NightPage,
+    translation = DefinitiveZombies_HearingEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Night_Interval2 {
+    type = double,
+    min = 0.01,
+    max = 0.99,
+    default = 0.75,
+    page = DefinitiveZombies_NightPage,
+    translation = DefinitiveZombies_NightInterval2,
+}
+
+option DefinitiveZombies.Night_Effect2_Speed {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_NightPage,
+    translation = DefinitiveZombies_SpeedEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Night_Effect2_Strength {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_NightPage,
+    translation = DefinitiveZombies_StrengthEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Night_Effect2_Toughness {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_NightPage,
+    translation = DefinitiveZombies_ToughnessEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Night_Effect2_Cognition {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_NightPage,
+    translation = DefinitiveZombies_CognitionEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Night_Effect2_Memory {
+    type = enum,
+    numValues = 11,
+    default = 7,
+    page = DefinitiveZombies_NightPage,
+    translation = DefinitiveZombies_MemoryEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Night_Effect2_Sight {
+    type = enum,
+    numValues = 11,
+    default = 7,
+    page = DefinitiveZombies_NightPage,
+    translation = DefinitiveZombies_SightEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Night_Effect2_Hearing {
+    type = enum,
+    numValues = 11,
+    default = 5,
+    page = DefinitiveZombies_NightPage,
+    translation = DefinitiveZombies_HearingEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+
+
+option DefinitiveZombies.TemperatureEnable {
+    type = boolean,
+    default = true,
+    page = DefinitiveZombies_TemperaturePage,
+    translation = DefinitiveZombies_TemperatureEnable,
+}
+
+option DefinitiveZombies.Temperature_Interval0 {
+    type = double,
+    min = -200.0,
+    max = 200.0,
+    default = -200,
+    page = DefinitiveZombies_TemperaturePage,
+    translation = DefinitiveZombies_TemperatureInterval0,
+}
+
+option DefinitiveZombies.Temperature_Effect0_Speed {
+    type = enum,
+    numValues = 11,
+    default = 8,
+    page = DefinitiveZombies_TemperaturePage,
+    translation = DefinitiveZombies_SpeedEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Temperature_Effect0_Strength {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_TemperaturePage,
+    translation = DefinitiveZombies_StrengthEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Temperature_Effect0_Toughness {
+    type = enum,
+    numValues = 11,
+    default = 5,
+    page = DefinitiveZombies_TemperaturePage,
+    translation = DefinitiveZombies_ToughnessEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Temperature_Effect0_Cognition {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_TemperaturePage,
+    translation = DefinitiveZombies_CognitionEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Temperature_Effect0_Memory {
+    type = enum,
+    numValues = 11,
+    default = 5,
+    page = DefinitiveZombies_TemperaturePage,
+    translation = DefinitiveZombies_MemoryEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Temperature_Effect0_Sight {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_TemperaturePage,
+    translation = DefinitiveZombies_SightEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Temperature_Effect0_Hearing {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_TemperaturePage,
+    translation = DefinitiveZombies_HearingEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Temperature_Interval1 {
+    type = double,
+    min = -200.0,
+    max = 200.0,
+    default = 0,
+    page = DefinitiveZombies_TemperaturePage,
+    translation = DefinitiveZombies_TemperatureInterval1,
+}
+
+option DefinitiveZombies.Temperature_Effect1_Speed {
+    type = enum,
+    numValues = 11,
+    default = 7,
+    page = DefinitiveZombies_TemperaturePage,
+    translation = DefinitiveZombies_SpeedEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Temperature_Effect1_Strength {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_TemperaturePage,
+    translation = DefinitiveZombies_StrengthEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Temperature_Effect1_Toughness {
+    type = enum,
+    numValues = 11,
+    default = 5,
+    page = DefinitiveZombies_TemperaturePage,
+    translation = DefinitiveZombies_ToughnessEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Temperature_Effect1_Cognition {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_TemperaturePage,
+    translation = DefinitiveZombies_CognitionEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Temperature_Effect1_Memory {
+    type = enum,
+    numValues = 11,
+    default = 5,
+    page = DefinitiveZombies_TemperaturePage,
+    translation = DefinitiveZombies_MemoryEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Temperature_Effect1_Sight {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_TemperaturePage,
+    translation = DefinitiveZombies_SightEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Temperature_Effect1_Hearing {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_TemperaturePage,
+    translation = DefinitiveZombies_HearingEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Temperature_Interval2 {
+    type = double,
+    min = -200.0,
+    max = 200.0,
+    default = 10,
+    page = DefinitiveZombies_TemperaturePage,
+    translation = DefinitiveZombies_TemperatureInterval2,
+}
+
+option DefinitiveZombies.Temperature_Effect2_Speed {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_TemperaturePage,
+    translation = DefinitiveZombies_SpeedEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Temperature_Effect2_Strength {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_TemperaturePage,
+    translation = DefinitiveZombies_StrengthEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Temperature_Effect2_Toughness {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_TemperaturePage,
+    translation = DefinitiveZombies_ToughnessEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Temperature_Effect2_Cognition {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_TemperaturePage,
+    translation = DefinitiveZombies_CognitionEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Temperature_Effect2_Memory {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_TemperaturePage,
+    translation = DefinitiveZombies_MemoryEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Temperature_Effect2_Sight {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_TemperaturePage,
+    translation = DefinitiveZombies_SightEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Temperature_Effect2_Hearing {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_TemperaturePage,
+    translation = DefinitiveZombies_HearingEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+
+
+option DefinitiveZombies.FogIntensityEnable {
+    type = boolean,
+    default = true,
+    page = DefinitiveZombies_FogPage,
+    translation = DefinitiveZombies_FogIntensityEnable,
+}
+
+option DefinitiveZombies.FogIntensity_Interval0 {
+    type = double,
+    min = 0.01,
+    max = 0.99,
+    default = 0.25,
+    page = DefinitiveZombies_FogPage,
+    translation = DefinitiveZombies_FogIntensityInterval0,
+}
+
+option DefinitiveZombies.FogIntensity_Effect0_Speed {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_FogPage,
+    translation = DefinitiveZombies_SpeedEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.FogIntensity_Effect0_Strength {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_FogPage,
+    translation = DefinitiveZombies_StrengthEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.FogIntensity_Effect0_Toughness {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_FogPage,
+    translation = DefinitiveZombies_ToughnessEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.FogIntensity_Effect0_Cognition {
+    type = enum,
+    numValues = 11,
+    default = 5,
+    page = DefinitiveZombies_FogPage,
+    translation = DefinitiveZombies_CognitionEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.FogIntensity_Effect0_Memory {
+    type = enum,
+    numValues = 11,
+    default = 5,
+    page = DefinitiveZombies_FogPage,
+    translation = DefinitiveZombies_MemoryEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.FogIntensity_Effect0_Sight {
+    type = enum,
+    numValues = 11,
+    default = 7,
+    page = DefinitiveZombies_FogPage,
+    translation = DefinitiveZombies_SightEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.FogIntensity_Effect0_Hearing {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_FogPage,
+    translation = DefinitiveZombies_HearingEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.FogIntensity_Interval1 {
+    type = double,
+    min = 0.01,
+    max = 0.99,
+    default = 0.50,
+    page = DefinitiveZombies_FogPage,
+    translation = DefinitiveZombies_FogIntensityInterval1,
+}
+
+option DefinitiveZombies.FogIntensity_Effect1_Speed {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_FogPage,
+    translation = DefinitiveZombies_SpeedEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.FogIntensity_Effect1_Strength {
+    type = enum,
+    numValues = 11,
+    default = 5,
+    page = DefinitiveZombies_FogPage,
+    translation = DefinitiveZombies_StrengthEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.FogIntensity_Effect1_Toughness {
+    type = enum,
+    numValues = 11,
+    default = 5,
+    page = DefinitiveZombies_FogPage,
+    translation = DefinitiveZombies_ToughnessEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.FogIntensity_Effect1_Cognition {
+    type = enum,
+    numValues = 11,
+    default = 5,
+    page = DefinitiveZombies_FogPage,
+    translation = DefinitiveZombies_CognitionEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.FogIntensity_Effect1_Memory {
+    type = enum,
+    numValues = 11,
+    default = 5,
+    page = DefinitiveZombies_FogPage,
+    translation = DefinitiveZombies_MemoryEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.FogIntensity_Effect1_Sight {
+    type = enum,
+    numValues = 11,
+    default = 8,
+    page = DefinitiveZombies_FogPage,
+    translation = DefinitiveZombies_SightEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.FogIntensity_Effect1_Hearing {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_FogPage,
+    translation = DefinitiveZombies_HearingEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.FogIntensity_Interval2 {
+    type = double,
+    min = 0.01,
+    max = 0.99,
+    default = 0.75,
+    page = DefinitiveZombies_FogPage,
+    translation = DefinitiveZombies_FogIntensityInterval2,
+}
+
+option DefinitiveZombies.FogIntensity_Effect2_Speed {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_FogPage,
+    translation = DefinitiveZombies_SpeedEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.FogIntensity_Effect2_Strength {
+    type = enum,
+    numValues = 11,
+    default = 5,
+    page = DefinitiveZombies_FogPage,
+    translation = DefinitiveZombies_StrengthEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.FogIntensity_Effect2_Toughness {
+    type = enum,
+    numValues = 11,
+    default = 5,
+    page = DefinitiveZombies_FogPage,
+    translation = DefinitiveZombies_ToughnessEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.FogIntensity_Effect2_Cognition {
+    type = enum,
+    numValues = 11,
+    default = 5,
+    page = DefinitiveZombies_FogPage,
+    translation = DefinitiveZombies_CognitionEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.FogIntensity_Effect2_Memory {
+    type = enum,
+    numValues = 11,
+    default = 4,
+    page = DefinitiveZombies_FogPage,
+    translation = DefinitiveZombies_MemoryEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.FogIntensity_Effect2_Sight {
+    type = enum,
+    numValues = 11,
+    default = 9,
+    page = DefinitiveZombies_FogPage,
+    translation = DefinitiveZombies_SightEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.FogIntensity_Effect2_Hearing {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_FogPage,
+    translation = DefinitiveZombies_HearingEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+
+
+option DefinitiveZombies.RainIntensityEnable {
+    type = boolean,
+    default = true,
+    page = DefinitiveZombies_RainPage,
+    translation = DefinitiveZombies_RainIntensityEnable,
+}
+
+option DefinitiveZombies.RainIntensity_Interval0 {
+    type = double,
+    min = 0.01,
+    max = 0.99,
+    default = 0.25,
+    page = DefinitiveZombies_RainPage,
+    translation = DefinitiveZombies_RainIntensityInterval0,
+}
+
+option DefinitiveZombies.RainIntensity_Effect0_Speed {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_RainPage,
+    translation = DefinitiveZombies_SpeedEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.RainIntensity_Effect0_Strength {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_RainPage,
+    translation = DefinitiveZombies_StrengthEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.RainIntensity_Effect0_Toughness {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_RainPage,
+    translation = DefinitiveZombies_ToughnessEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.RainIntensity_Effect0_Cognition {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_RainPage,
+    translation = DefinitiveZombies_CognitionEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.RainIntensity_Effect0_Memory {
+    type = enum,
+    numValues = 11,
+    default = 7,
+    page = DefinitiveZombies_RainPage,
+    translation = DefinitiveZombies_MemoryEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.RainIntensity_Effect0_Sight {
+    type = enum,
+    numValues = 11,
+    default = 7,
+    page = DefinitiveZombies_RainPage,
+    translation = DefinitiveZombies_SightEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.RainIntensity_Effect0_Hearing {
+    type = enum,
+    numValues = 11,
+    default = 7,
+    page = DefinitiveZombies_RainPage,
+    translation = DefinitiveZombies_HearingEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.RainIntensity_Interval1 {
+    type = double,
+    min = 0.01,
+    max = 0.99,
+    default = 0.50,
+    page = DefinitiveZombies_RainPage,
+    translation = DefinitiveZombies_RainIntensityInterval1,
+}
+
+option DefinitiveZombies.RainIntensity_Effect1_Speed {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_RainPage,
+    translation = DefinitiveZombies_SpeedEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.RainIntensity_Effect1_Strength {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_RainPage,
+    translation = DefinitiveZombies_StrengthEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.RainIntensity_Effect1_Toughness {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_RainPage,
+    translation = DefinitiveZombies_ToughnessEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.RainIntensity_Effect1_Cognition {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_RainPage,
+    translation = DefinitiveZombies_CognitionEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.RainIntensity_Effect1_Memory {
+    type = enum,
+    numValues = 11,
+    default = 8,
+    page = DefinitiveZombies_RainPage,
+    translation = DefinitiveZombies_MemoryEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.RainIntensity_Effect1_Sight {
+    type = enum,
+    numValues = 11,
+    default = 8,
+    page = DefinitiveZombies_RainPage,
+    translation = DefinitiveZombies_SightEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.RainIntensity_Effect1_Hearing {
+    type = enum,
+    numValues = 11,
+    default = 8,
+    page = DefinitiveZombies_RainPage,
+    translation = DefinitiveZombies_HearingEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.RainIntensity_Interval2 {
+    type = double,
+    min = 0.01,
+    max = 0.99,
+    default = 0.75,
+    page = DefinitiveZombies_RainPage,
+    translation = DefinitiveZombies_RainIntensityInterval2,
+}
+
+option DefinitiveZombies.RainIntensity_Effect2_Speed {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_RainPage,
+    translation = DefinitiveZombies_SpeedEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.RainIntensity_Effect2_Strength {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_RainPage,
+    translation = DefinitiveZombies_StrengthEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.RainIntensity_Effect2_Toughness {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_RainPage,
+    translation = DefinitiveZombies_ToughnessEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.RainIntensity_Effect2_Cognition {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_RainPage,
+    translation = DefinitiveZombies_CognitionEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.RainIntensity_Effect2_Memory {
+    type = enum,
+    numValues = 11,
+    default = 9,
+    page = DefinitiveZombies_RainPage,
+    translation = DefinitiveZombies_MemoryEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.RainIntensity_Effect2_Sight {
+    type = enum,
+    numValues = 11,
+    default = 9,
+    page = DefinitiveZombies_RainPage,
+    translation = DefinitiveZombies_SightEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.RainIntensity_Effect2_Hearing {
+    type = enum,
+    numValues = 11,
+    default = 9,
+    page = DefinitiveZombies_RainPage,
+    translation = DefinitiveZombies_HearingEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+
+option DefinitiveZombies.SnowIntensityEnable {
+    type = boolean,
+    default = true,
+    page = DefinitiveZombies_SnowPage,
+    translation = DefinitiveZombies_SnowIntensityEnable,
+}
+
+option DefinitiveZombies.SnowIntensity_Interval0 {
+    type = double,
+    min = 0.01,
+    max = 0.99,
+    default = 0.25,
+    page = DefinitiveZombies_SnowPage,
+    translation = DefinitiveZombies_SnowIntensityInterval0,
+}
+
+option DefinitiveZombies.SnowIntensity_Effect0_Speed {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_SnowPage,
+    translation = DefinitiveZombies_SpeedEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.SnowIntensity_Effect0_Strength {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_SnowPage,
+    translation = DefinitiveZombies_StrengthEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.SnowIntensity_Effect0_Toughness {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_SnowPage,
+    translation = DefinitiveZombies_ToughnessEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.SnowIntensity_Effect0_Cognition {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_SnowPage,
+    translation = DefinitiveZombies_CognitionEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.SnowIntensity_Effect0_Memory {
+    type = enum,
+    numValues = 11,
+    default = 7,
+    page = DefinitiveZombies_SnowPage,
+    translation = DefinitiveZombies_MemoryEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.SnowIntensity_Effect0_Sight {
+    type = enum,
+    numValues = 11,
+    default = 7,
+    page = DefinitiveZombies_SnowPage,
+    translation = DefinitiveZombies_SightEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.SnowIntensity_Effect0_Hearing {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_SnowPage,
+    translation = DefinitiveZombies_HearingEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.SnowIntensity_Interval1 {
+    type = double,
+    min = 0.01,
+    max = 0.99,
+    default = 0.50,
+    page = DefinitiveZombies_SnowPage,
+    translation = DefinitiveZombies_SnowIntensityInterval1,
+}
+
+option DefinitiveZombies.SnowIntensity_Effect1_Speed {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_SnowPage,
+    translation = DefinitiveZombies_SpeedEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.SnowIntensity_Effect1_Strength {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_SnowPage,
+    translation = DefinitiveZombies_StrengthEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.SnowIntensity_Effect1_Toughness {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_SnowPage,
+    translation = DefinitiveZombies_ToughnessEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.SnowIntensity_Effect1_Cognition {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_SnowPage,
+    translation = DefinitiveZombies_CognitionEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.SnowIntensity_Effect1_Memory {
+    type = enum,
+    numValues = 11,
+    default = 8,
+    page = DefinitiveZombies_SnowPage,
+    translation = DefinitiveZombies_MemoryEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.SnowIntensity_Effect1_Sight {
+    type = enum,
+    numValues = 11,
+    default = 8,
+    page = DefinitiveZombies_SnowPage,
+    translation = DefinitiveZombies_SightEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.SnowIntensity_Effect1_Hearing {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_SnowPage,
+    translation = DefinitiveZombies_HearingEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.SnowIntensity_Interval2 {
+    type = double,
+    min = 0.01,
+    max = 0.99,
+    default = 0.75,
+    page = DefinitiveZombies_SnowPage,
+    translation = DefinitiveZombies_SnowIntensityInterval2,
+}
+
+option DefinitiveZombies.SnowIntensity_Effect2_Speed {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_SnowPage,
+    translation = DefinitiveZombies_SpeedEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.SnowIntensity_Effect2_Strength {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_SnowPage,
+    translation = DefinitiveZombies_StrengthEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.SnowIntensity_Effect2_Toughness {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_SnowPage,
+    translation = DefinitiveZombies_ToughnessEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.SnowIntensity_Effect2_Cognition {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_SnowPage,
+    translation = DefinitiveZombies_CognitionEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.SnowIntensity_Effect2_Memory {
+    type = enum,
+    numValues = 11,
+    default = 9,
+    page = DefinitiveZombies_SnowPage,
+    translation = DefinitiveZombies_MemoryEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.SnowIntensity_Effect2_Sight {
+    type = enum,
+    numValues = 11,
+    default = 9,
+    page = DefinitiveZombies_SnowPage,
+    translation = DefinitiveZombies_SightEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.SnowIntensity_Effect2_Hearing {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_SnowPage,
+    translation = DefinitiveZombies_HearingEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+
+option DefinitiveZombies.CloudIntensityEnable {
+    type = boolean,
+    default = true,
+    page = DefinitiveZombies_CloudPage,
+    translation = DefinitiveZombies_CloudIntensityEnable,
+}
+
+option DefinitiveZombies.CloudIntensity_Interval0 {
+    type = double,
+    min = 0.01,
+    max = 0.99,
+    default = 0.25,
+    page = DefinitiveZombies_CloudPage,
+    translation = DefinitiveZombies_CloudIntensityInterval0,
+}
+
+option DefinitiveZombies.CloudIntensity_Effect0_Speed {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_CloudPage,
+    translation = DefinitiveZombies_SpeedEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.CloudIntensity_Effect0_Strength {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_CloudPage,
+    translation = DefinitiveZombies_StrengthEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.CloudIntensity_Effect0_Toughness {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_CloudPage,
+    translation = DefinitiveZombies_ToughnessEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.CloudIntensity_Effect0_Cognition {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_CloudPage,
+    translation = DefinitiveZombies_CognitionEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.CloudIntensity_Effect0_Memory {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_CloudPage,
+    translation = DefinitiveZombies_MemoryEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.CloudIntensity_Effect0_Sight {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_CloudPage,
+    translation = DefinitiveZombies_SightEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.CloudIntensity_Effect0_Hearing {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_CloudPage,
+    translation = DefinitiveZombies_HearingEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.CloudIntensity_Interval1 {
+    type = double,
+    min = 0.01,
+    max = 0.99,
+    default = 0.50,
+    page = DefinitiveZombies_CloudPage,
+    translation = DefinitiveZombies_CloudIntensityInterval1,
+}
+
+option DefinitiveZombies.CloudIntensity_Effect1_Speed {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_CloudPage,
+    translation = DefinitiveZombies_SpeedEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.CloudIntensity_Effect1_Strength {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_CloudPage,
+    translation = DefinitiveZombies_StrengthEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.CloudIntensity_Effect1_Toughness {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_CloudPage,
+    translation = DefinitiveZombies_ToughnessEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.CloudIntensity_Effect1_Cognition {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_CloudPage,
+    translation = DefinitiveZombies_CognitionEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.CloudIntensity_Effect1_Memory {
+    type = enum,
+    numValues = 11,
+    default = 7,
+    page = DefinitiveZombies_CloudPage,
+    translation = DefinitiveZombies_MemoryEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.CloudIntensity_Effect1_Sight {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_CloudPage,
+    translation = DefinitiveZombies_SightEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.CloudIntensity_Effect1_Hearing {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_CloudPage,
+    translation = DefinitiveZombies_HearingEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.CloudIntensity_Interval2 {
+    type = double,
+    min = 0.01,
+    max = 0.99,
+    default = 0.75,
+    page = DefinitiveZombies_CloudPage,
+    translation = DefinitiveZombies_CloudIntensityInterval2,
+}
+
+option DefinitiveZombies.CloudIntensity_Effect2_Speed {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_CloudPage,
+    translation = DefinitiveZombies_SpeedEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.CloudIntensity_Effect2_Strength {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_CloudPage,
+    translation = DefinitiveZombies_StrengthEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.CloudIntensity_Effect2_Toughness {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_CloudPage,
+    translation = DefinitiveZombies_ToughnessEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.CloudIntensity_Effect2_Cognition {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_CloudPage,
+    translation = DefinitiveZombies_CognitionEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.CloudIntensity_Effect2_Memory {
+    type = enum,
+    numValues = 11,
+    default = 7,
+    page = DefinitiveZombies_CloudPage,
+    translation = DefinitiveZombies_MemoryEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.CloudIntensity_Effect2_Sight {
+    type = enum,
+    numValues = 11,
+    default = 7,
+    page = DefinitiveZombies_CloudPage,
+    translation = DefinitiveZombies_SightEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.CloudIntensity_Effect2_Hearing {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_CloudPage,
+    translation = DefinitiveZombies_HearingEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+
+
+
+option DefinitiveZombies.WindIntensityEnable {
+    type = boolean,
+    default = true,
+    page = DefinitiveZombies_WindPage,
+    translation = DefinitiveZombies_WindIntensityEnable,
+}
+
+option DefinitiveZombies.WindIntensity_Interval0 {
+    type = double,
+    min = 0.01,
+    max = 0.99,
+    default = 0.25,
+    page = DefinitiveZombies_WindPage,
+    translation = DefinitiveZombies_WindIntensityInterval0,
+}
+
+option DefinitiveZombies.WindIntensity_Effect0_Speed {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_WindPage,
+    translation = DefinitiveZombies_SpeedEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.WindIntensity_Effect0_Strength {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_WindPage,
+    translation = DefinitiveZombies_StrengthEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.WindIntensity_Effect0_Toughness {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_WindPage,
+    translation = DefinitiveZombies_ToughnessEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.WindIntensity_Effect0_Cognition {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_WindPage,
+    translation = DefinitiveZombies_CognitionEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.WindIntensity_Effect0_Memory {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_WindPage,
+    translation = DefinitiveZombies_MemoryEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.WindIntensity_Effect0_Sight {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_WindPage,
+    translation = DefinitiveZombies_SightEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.WindIntensity_Effect0_Hearing {
+    type = enum,
+    numValues = 11,
+    default = 7,
+    page = DefinitiveZombies_WindPage,
+    translation = DefinitiveZombies_HearingEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.WindIntensity_Interval1 {
+    type = double,
+    min = 0.01,
+    max = 0.99,
+    default = 0.50,
+    page = DefinitiveZombies_WindPage,
+    translation = DefinitiveZombies_WindIntensityInterval1,
+}
+
+option DefinitiveZombies.WindIntensity_Effect1_Speed {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_WindPage,
+    translation = DefinitiveZombies_SpeedEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.WindIntensity_Effect1_Strength {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_WindPage,
+    translation = DefinitiveZombies_StrengthEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.WindIntensity_Effect1_Toughness {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_WindPage,
+    translation = DefinitiveZombies_ToughnessEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.WindIntensity_Effect1_Cognition {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_WindPage,
+    translation = DefinitiveZombies_CognitionEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.WindIntensity_Effect1_Memory {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_WindPage,
+    translation = DefinitiveZombies_MemoryEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.WindIntensity_Effect1_Sight {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_WindPage,
+    translation = DefinitiveZombies_SightEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.WindIntensity_Effect1_Hearing {
+    type = enum,
+    numValues = 11,
+    default = 8,
+    page = DefinitiveZombies_WindPage,
+    translation = DefinitiveZombies_HearingEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.WindIntensity_Interval2 {
+    type = double,
+    min = 0.01,
+    max = 0.99,
+    default = 0.75,
+    page = DefinitiveZombies_WindPage,
+    translation = DefinitiveZombies_WindIntensityInterval2,
+}
+
+option DefinitiveZombies.WindIntensity_Effect2_Speed {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_WindPage,
+    translation = DefinitiveZombies_SpeedEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.WindIntensity_Effect2_Strength {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_WindPage,
+    translation = DefinitiveZombies_StrengthEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.WindIntensity_Effect2_Toughness {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_WindPage,
+    translation = DefinitiveZombies_ToughnessEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.WindIntensity_Effect2_Cognition {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_WindPage,
+    translation = DefinitiveZombies_CognitionEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.WindIntensity_Effect2_Memory {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_WindPage,
+    translation = DefinitiveZombies_MemoryEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.WindIntensity_Effect2_Sight {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_WindPage,
+    translation = DefinitiveZombies_SightEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.WindIntensity_Effect2_Hearing {
+    type = enum,
+    numValues = 11,
+    default = 9,
+    page = DefinitiveZombies_WindPage,
+    translation = DefinitiveZombies_HearingEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+
+
+option DefinitiveZombies.MoonPhaseEnable {
+    type = boolean,
+    default = true,
+    page = DefinitiveZombies_MoonPage1,
+    translation = DefinitiveZombies_MoonPhaseFullEnable,
+}
+
+option DefinitiveZombies.MoonPhaseMoonThreshold {
+    type = double,
+    min = 0.0,
+    max = 1.0,
+    default = 0.75,
+    page = DefinitiveZombies_MoonPage1,
+    translation = DefinitiveZombies_MoonPhaseMoonThreshold,
+}
+
+option DefinitiveZombies.MoonPhase_Interval0 {
+    type = double,
+    min = 0.0,
+    max = 0.0,
+    default = 0.0,
+    page = DefinitiveZombies_MoonPage1,
+    translation = DefinitiveZombies_MoonPhaseNewInterval,
+}
+
+option DefinitiveZombies.MoonPhase_Effect0_Speed {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage1,
+    translation = DefinitiveZombies_SpeedEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect0_Strength {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage1,
+    translation = DefinitiveZombies_StrengthEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect0_Toughness {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage1,
+    translation = DefinitiveZombies_ToughnessEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect0_Cognition {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage1,
+    translation = DefinitiveZombies_CognitionEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect0_Memory {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage1,
+    translation = DefinitiveZombies_MemoryEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect0_Sight {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage1,
+    translation = DefinitiveZombies_SightEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect0_Hearing {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage1,
+    translation = DefinitiveZombies_HearingEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Interval1 {
+    type = double,
+    min = 1.0,
+    max = 1.0,
+    default = 1.0,
+    page = DefinitiveZombies_MoonPage1,
+    translation = DefinitiveZombies_MoonPhaseWaxingCrescentInterval,
+}
+
+option DefinitiveZombies.MoonPhase_Effect1_Speed {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage1,
+    translation = DefinitiveZombies_SpeedEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect1_Strength {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage1,
+    translation = DefinitiveZombies_StrengthEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect1_Toughness {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage1,
+    translation = DefinitiveZombies_ToughnessEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect1_Cognition {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage1,
+    translation = DefinitiveZombies_CognitionEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect1_Memory {
+    type = enum,
+    numValues = 11,
+    default = 5,
+    page = DefinitiveZombies_MoonPage1,
+    translation = DefinitiveZombies_MemoryEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect1_Sight {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage1,
+    translation = DefinitiveZombies_SightEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect1_Hearing {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage1,
+    translation = DefinitiveZombies_HearingEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Interval2 {
+    type = double,
+    min = 2.0,
+    max = 2.0,
+    default = 2.0,
+    page = DefinitiveZombies_MoonPage1,
+    translation = DefinitiveZombies_MoonPhaseFirstQuarterInterval,
+}
+
+option DefinitiveZombies.MoonPhase_Effect2_Speed {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage1,
+    translation = DefinitiveZombies_SpeedEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect2_Strength {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage1,
+    translation = DefinitiveZombies_StrengthEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect2_Toughness {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage1,
+    translation = DefinitiveZombies_ToughnessEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect2_Cognition {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage1,
+    translation = DefinitiveZombies_CognitionEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect2_Memory {
+    type = enum,
+    numValues = 11,
+    default = 5,
+    page = DefinitiveZombies_MoonPage1,
+    translation = DefinitiveZombies_MemoryEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect2_Sight {
+    type = enum,
+    numValues = 11,
+    default = 5,
+    page = DefinitiveZombies_MoonPage1,
+    translation = DefinitiveZombies_SightEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect2_Hearing {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage1,
+    translation = DefinitiveZombies_HearingEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Interval3 {
+    type = double,
+    min = 3.0,
+    max = 3.0,
+    default = 3.0,
+    page = DefinitiveZombies_MoonPage1,
+    translation = DefinitiveZombies_MoonPhaseWaxingGibbousInterval,
+}
+
+option DefinitiveZombies.MoonPhase_Effect3_Speed {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage1,
+    translation = DefinitiveZombies_SpeedEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect3_Strength {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage1,
+    translation = DefinitiveZombies_StrengthEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect3_Toughness {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage1,
+    translation = DefinitiveZombies_ToughnessEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect3_Cognition {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage1,
+    translation = DefinitiveZombies_CognitionEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect3_Memory {
+    type = enum,
+    numValues = 11,
+    default = 5,
+    page = DefinitiveZombies_MoonPage1,
+    translation = DefinitiveZombies_MemoryEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect3_Sight {
+    type = enum,
+    numValues = 11,
+    default = 4,
+    page = DefinitiveZombies_MoonPage1,
+    translation = DefinitiveZombies_SightEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect3_Hearing {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage1,
+    translation = DefinitiveZombies_HearingEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Interval4 {
+    type = double,
+    min = 4.0,
+    max = 4.0,
+    default = 4.0,
+    page = DefinitiveZombies_MoonPage2,
+    translation = DefinitiveZombies_MoonPhaseFullInterval,
+}
+
+option DefinitiveZombies.MoonPhase_Effect4_Speed {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage2,
+    translation = DefinitiveZombies_SpeedEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect4_Strength {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage2,
+    translation = DefinitiveZombies_StrengthEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect4_Toughness {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage2,
+    translation = DefinitiveZombies_ToughnessEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect4_Cognition {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage2,
+    translation = DefinitiveZombies_CognitionEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect4_Memory {
+    type = enum,
+    numValues = 11,
+    default = 4,
+    page = DefinitiveZombies_MoonPage2,
+    translation = DefinitiveZombies_MemoryEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect4_Sight {
+    type = enum,
+    numValues = 11,
+    default = 4,
+    page = DefinitiveZombies_MoonPage2,
+    translation = DefinitiveZombies_SightEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect4_Hearing {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage2,
+    translation = DefinitiveZombies_HearingEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Interval5 {
+    type = double,
+    min = 5.0,
+    max = 5.0,
+    default = 5.0,
+    page = DefinitiveZombies_MoonPage2,
+    translation = DefinitiveZombies_MoonPhaseWaningGibbousInterval,
+}
+
+option DefinitiveZombies.MoonPhase_Effect5_Speed {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage2,
+    translation = DefinitiveZombies_SpeedEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect5_Strength {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage2,
+    translation = DefinitiveZombies_StrengthEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect5_Toughness {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage2,
+    translation = DefinitiveZombies_ToughnessEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect5_Cognition {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage2,
+    translation = DefinitiveZombies_CognitionEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect5_Memory {
+    type = enum,
+    numValues = 11,
+    default = 5,
+    page = DefinitiveZombies_MoonPage2,
+    translation = DefinitiveZombies_MemoryEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect5_Sight {
+    type = enum,
+    numValues = 11,
+    default = 4,
+    page = DefinitiveZombies_MoonPage2,
+    translation = DefinitiveZombies_SightEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect5_Hearing {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage2,
+    translation = DefinitiveZombies_HearingEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Interval6 {
+    type = double,
+    min = 6.0,
+    max = 6.0,
+    default = 6.0,
+    page = DefinitiveZombies_MoonPage2,
+    translation = DefinitiveZombies_MoonPhaseThirdQuarterInterval,
+}
+
+option DefinitiveZombies.MoonPhase_Effect6_Speed {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage2,
+    translation = DefinitiveZombies_SpeedEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect6_Strength {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage2,
+    translation = DefinitiveZombies_StrengthEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect6_Toughness {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage2,
+    translation = DefinitiveZombies_ToughnessEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect6_Cognition {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage2,
+    translation = DefinitiveZombies_CognitionEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect6_Memory {
+    type = enum,
+    numValues = 11,
+    default = 5,
+    page = DefinitiveZombies_MoonPage2,
+    translation = DefinitiveZombies_MemoryEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect6_Sight {
+    type = enum,
+    numValues = 11,
+    default = 5,
+    page = DefinitiveZombies_MoonPage2,
+    translation = DefinitiveZombies_SightEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect6_Hearing {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage2,
+    translation = DefinitiveZombies_HearingEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Interval7 {
+    type = double,
+    min = 7.0,
+    max = 7.0,
+    default = 7.0,
+    page = DefinitiveZombies_MoonPage2,
+    translation = DefinitiveZombies_MoonPhaseWaningCrescentInterval,
+}
+
+option DefinitiveZombies.MoonPhase_Effect7_Speed {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage2,
+    translation = DefinitiveZombies_SpeedEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect7_Strength {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage2,
+    translation = DefinitiveZombies_StrengthEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect7_Toughness {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage2,
+    translation = DefinitiveZombies_ToughnessEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect7_Cognition {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage2,
+    translation = DefinitiveZombies_CognitionEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect7_Memory {
+    type = enum,
+    numValues = 11,
+    default = 5,
+    page = DefinitiveZombies_MoonPage2,
+    translation = DefinitiveZombies_MemoryEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect7_Sight {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage2,
+    translation = DefinitiveZombies_SightEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.MoonPhase_Effect7_Hearing {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_MoonPage2,
+    translation = DefinitiveZombies_HearingEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+
+option DefinitiveZombies.TimeEnable {
+    type = boolean,
+    default = false,
+    page = DefinitiveZombies_TimePage,
+    translation = DefinitiveZombies_TimeEnable,
+}
+
+option DefinitiveZombies.Time_Interval0 {
+    type = double,
+    min = 0.00,
+    max = 24.00,
+    default = 4.00,
+    page = DefinitiveZombies_TimePage,
+    translation = DefinitiveZombies_TimeInterval0,
+}
+
+option DefinitiveZombies.Time_Effect0_Speed {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_TimePage,
+    translation = DefinitiveZombies_SpeedEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Time_Effect0_Strength {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_TimePage,
+    translation = DefinitiveZombies_StrengthEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Time_Effect0_Toughness {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_TimePage,
+    translation = DefinitiveZombies_ToughnessEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Time_Effect0_Cognition {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_TimePage,
+    translation = DefinitiveZombies_CognitionEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Time_Effect0_Memory {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_TimePage,
+    translation = DefinitiveZombies_MemoryEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Time_Effect0_Sight {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_TimePage,
+    translation = DefinitiveZombies_SightEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Time_Effect0_Hearing {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_TimePage,
+    translation = DefinitiveZombies_HearingEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Time_Interval1 {
+    type = double,
+    min = 0.00,
+    max = 24.00,
+    default = 18.00,
+    page = DefinitiveZombies_TimePage,
+    translation = DefinitiveZombies_TimeInterval1,
+}
+
+option DefinitiveZombies.Time_Effect1_Speed {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_TimePage,
+    translation = DefinitiveZombies_SpeedEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Time_Effect1_Strength {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_TimePage,
+    translation = DefinitiveZombies_StrengthEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Time_Effect1_Toughness {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_TimePage,
+    translation = DefinitiveZombies_ToughnessEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Time_Effect1_Cognition {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_TimePage,
+    translation = DefinitiveZombies_CognitionEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Time_Effect1_Memory {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_TimePage,
+    translation = DefinitiveZombies_MemoryEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Time_Effect1_Sight {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_TimePage,
+    translation = DefinitiveZombies_SightEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Time_Effect1_Hearing {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DefinitiveZombies_TimePage,
+    translation = DefinitiveZombies_HearingEffect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+
+
+
+option DefinitiveZombies.Speed_Seed_Enable {
+    type = boolean,
+    default = false,
+    page = DZ_Seed_Page1,
+    translation = DZ_Speed_Seed_Enable,
+}
+
+option DefinitiveZombies.Speed_Seed1 {
+    type = double,
+    min = 0.00,
+    max = 100.00,
+    default = 25.00,
+    page = DZ_Seed_Page1,
+    translation = DZ_Speed_Seed1,
+}
+
+option DefinitiveZombies.Speed_Seed1_Effect {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DZ_Seed_Page1,
+    translation = DZ_Speed_Seed1_Effect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Speed_Seed2 {
+    type = double,
+    min = 0.00,
+    max = 100.00,
+    default = 25.00,
+    page = DZ_Seed_Page1,
+    translation = DZ_Speed_Seed2,
+}
+
+option DefinitiveZombies.Speed_Seed2_Effect {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DZ_Seed_Page1,
+    translation = DZ_Speed_Seed2_Effect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Speed_Seed3 {
+    type = double,
+    min = 0.00,
+    max = 100.00,
+    default = 25.00,
+    page = DZ_Seed_Page1,
+    translation = DZ_Speed_Seed3,
+}
+
+option DefinitiveZombies.Speed_Seed3_Effect {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DZ_Seed_Page1,
+    translation = DZ_Speed_Seed3_Effect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Speed_Seed4 {
+    type = double,
+    min = 0.00,
+    max = 100.00,
+    default = 25.00,
+    page = DZ_Seed_Page1,
+    translation = DZ_Speed_Seed4,
+}
+
+option DefinitiveZombies.Speed_Seed4_Effect {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DZ_Seed_Page1,
+    translation = DZ_Speed_Seed4_Effect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+
+option DefinitiveZombies.Strength_Seed_Enable {
+    type = boolean,
+    default = false,
+    page = DZ_Seed_Page1,
+    translation = DZ_Strength_Seed_Enable,
+}
+
+option DefinitiveZombies.Strength_Seed1 {
+    type = double,
+    min = 0.00,
+    max = 100.00,
+    default = 25.00,
+    page = DZ_Seed_Page1,
+    translation = DZ_Strength_Seed1,
+}
+
+option DefinitiveZombies.Strength_Seed1_Effect {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DZ_Seed_Page1,
+    translation = DZ_Strength_Seed1_Effect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Strength_Seed2 {
+    type = double,
+    min = 0.00,
+    max = 100.00,
+    default = 25.00,
+    page = DZ_Seed_Page1,
+    translation = DZ_Strength_Seed2,
+}
+
+option DefinitiveZombies.Strength_Seed2_Effect {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DZ_Seed_Page1,
+    translation = DZ_Strength_Seed2_Effect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Strength_Seed3 {
+    type = double,
+    min = 0.00,
+    max = 100.00,
+    default = 25.00,
+    page = DZ_Seed_Page1,
+    translation = DZ_Strength_Seed3,
+}
+
+option DefinitiveZombies.Strength_Seed3_Effect {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DZ_Seed_Page1,
+    translation = DZ_Strength_Seed3_Effect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Strength_Seed4 {
+    type = double,
+    min = 0.00,
+    max = 100.00,
+    default = 25.00,
+    page = DZ_Seed_Page1,
+    translation = DZ_Strength_Seed4,
+}
+
+option DefinitiveZombies.Strength_Seed4_Effect {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DZ_Seed_Page1,
+    translation = DZ_Strength_Seed4_Effect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+
+
+option DefinitiveZombies.Toughness_Seed_Enable {
+    type = boolean,
+    default = false,
+    page = DZ_Seed_Page1,
+    translation = DZ_Toughness_Seed_Enable,
+}
+
+option DefinitiveZombies.Toughness_Seed1 {
+    type = double,
+    min = 0.00,
+    max = 100.00,
+    default = 25.00,
+    page = DZ_Seed_Page1,
+    translation = DZ_Toughness_Seed1,
+}
+
+option DefinitiveZombies.Toughness_Seed1_Effect {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DZ_Seed_Page1,
+    translation = DZ_Toughness_Seed1_Effect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Toughness_Seed2 {
+    type = double,
+    min = 0.00,
+    max = 100.00,
+    default = 25.00,
+    page = DZ_Seed_Page1,
+    translation = DZ_Toughness_Seed2,
+}
+
+option DefinitiveZombies.Toughness_Seed2_Effect {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DZ_Seed_Page1,
+    translation = DZ_Toughness_Seed2_Effect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Toughness_Seed3 {
+    type = double,
+    min = 0.00,
+    max = 100.00,
+    default = 25.00,
+    page = DZ_Seed_Page1,
+    translation = DZ_Toughness_Seed3,
+}
+
+option DefinitiveZombies.Toughness_Seed3_Effect {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DZ_Seed_Page1,
+    translation = DZ_Toughness_Seed3_Effect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Toughness_Seed4 {
+    type = double,
+    min = 0.00,
+    max = 100.00,
+    default = 25.00,
+    page = DZ_Seed_Page1,
+    translation = DZ_Toughness_Seed4,
+}
+
+option DefinitiveZombies.Toughness_Seed4_Effect {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DZ_Seed_Page1,
+    translation = DZ_Toughness_Seed4_Effect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Cognition_Seed_Enable {
+    type = boolean,
+    default = false,
+    page = DZ_Seed_Page2,
+    translation = DZ_Cognition_Seed_Enable,
+}
+
+option DefinitiveZombies.Cognition_Seed1 {
+    type = double,
+    min = 0.00,
+    max = 100.00,
+    default = 25.00,
+    page = DZ_Seed_Page2,
+    translation = DZ_Cognition_Seed1,
+}
+
+option DefinitiveZombies.Cognition_Seed1_Effect {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DZ_Seed_Page2,
+    translation = DZ_Cognition_Seed1_Effect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Cognition_Seed2 {
+    type = double,
+    min = 0.00,
+    max = 100.00,
+    default = 25.00,
+    page = DZ_Seed_Page2,
+    translation = DZ_Cognition_Seed2,
+}
+
+option DefinitiveZombies.Cognition_Seed2_Effect {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DZ_Seed_Page2,
+    translation = DZ_Cognition_Seed2_Effect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Cognition_Seed3 {
+    type = double,
+    min = 0.00,
+    max = 100.00,
+    default = 25.00,
+    page = DZ_Seed_Page2,
+    translation = DZ_Cognition_Seed3,
+}
+
+option DefinitiveZombies.Cognition_Seed3_Effect {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DZ_Seed_Page2,
+    translation = DZ_Cognition_Seed3_Effect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Cognition_Seed4 {
+    type = double,
+    min = 0.00,
+    max = 100.00,
+    default = 25.00,
+    page = DZ_Seed_Page2,
+    translation = DZ_Cognition_Seed4,
+}
+
+option DefinitiveZombies.Cognition_Seed4_Effect {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DZ_Seed_Page2,
+    translation = DZ_Cognition_Seed4_Effect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Memory_Seed_Enable {
+    type = boolean,
+    default = false,
+    page = DZ_Seed_Page2,
+    translation = DZ_Memory_Seed_Enable,
+}
+
+option DefinitiveZombies.Memory_Seed1 {
+    type = double,
+    min = 0.00,
+    max = 100.00,
+    default = 25.00,
+    page = DZ_Seed_Page2,
+    translation = DZ_Memory_Seed1,
+}
+
+option DefinitiveZombies.Memory_Seed1_Effect {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DZ_Seed_Page2,
+    translation = DZ_Memory_Seed1_Effect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Memory_Seed2 {
+    type = double,
+    min = 0.00,
+    max = 100.00,
+    default = 25.00,
+    page = DZ_Seed_Page2,
+    translation = DZ_Memory_Seed2,
+}
+
+option DefinitiveZombies.Memory_Seed2_Effect {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DZ_Seed_Page2,
+    translation = DZ_Memory_Seed2_Effect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Memory_Seed3 {
+    type = double,
+    min = 0.00,
+    max = 100.00,
+    default = 25.00,
+    page = DZ_Seed_Page2,
+    translation = DZ_Memory_Seed3,
+}
+
+option DefinitiveZombies.Memory_Seed3_Effect {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DZ_Seed_Page2,
+    translation = DZ_Memory_Seed3_Effect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Memory_Seed4 {
+    type = double,
+    min = 0.00,
+    max = 100.00,
+    default = 25.00,
+    page = DZ_Seed_Page2,
+    translation = DZ_Memory_Seed4,
+}
+
+option DefinitiveZombies.Memory_Seed4_Effect {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DZ_Seed_Page2,
+    translation = DZ_Memory_Seed4_Effect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Sight_Seed_Enable {
+    type = boolean,
+    default = false,
+    page = DZ_Seed_Page2,
+    translation = DZ_Sight_Seed_Enable,
+}
+
+option DefinitiveZombies.Sight_Seed1 {
+    type = double,
+    min = 0.00,
+    max = 100.00,
+    default = 25.00,
+    page = DZ_Seed_Page2,
+    translation = DZ_Sight_Seed1,
+}
+
+option DefinitiveZombies.Sight_Seed1_Effect {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DZ_Seed_Page2,
+    translation = DZ_Sight_Seed1_Effect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Sight_Seed2 {
+    type = double,
+    min = 0.00,
+    max = 100.00,
+    default = 25.00,
+    page = DZ_Seed_Page2,
+    translation = DZ_Sight_Seed2,
+}
+
+option DefinitiveZombies.Sight_Seed2_Effect {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DZ_Seed_Page2,
+    translation = DZ_Sight_Seed2_Effect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Sight_Seed3 {
+    type = double,
+    min = 0.00,
+    max = 100.00,
+    default = 25.00,
+    page = DZ_Seed_Page2,
+    translation = DZ_Sight_Seed3,
+}
+
+option DefinitiveZombies.Sight_Seed3_Effect {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DZ_Seed_Page2,
+    translation = DZ_Sight_Seed3_Effect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Sight_Seed4 {
+    type = double,
+    min = 0.00,
+    max = 100.00,
+    default = 25.00,
+    page = DZ_Seed_Page2,
+    translation = DZ_Sight_Seed4,
+}
+
+option DefinitiveZombies.Sight_Seed4_Effect {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DZ_Seed_Page2,
+    translation = DZ_Sight_Seed4_Effect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Hearing_Seed_Enable {
+    type = boolean,
+    default = false,
+    page = DZ_Seed_Page3,
+    translation = DZ_Hearing_Seed_Enable,
+}
+
+option DefinitiveZombies.Hearing_Seed1 {
+    type = double,
+    min = 0.00,
+    max = 100.00,
+    default = 25.00,
+    page = DZ_Seed_Page3,
+    translation = DZ_Hearing_Seed1,
+}
+
+option DefinitiveZombies.Hearing_Seed1_Effect {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DZ_Seed_Page3,
+    translation = DZ_Hearing_Seed1_Effect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Hearing_Seed2 {
+    type = double,
+    min = 0.00,
+    max = 100.00,
+    default = 25.00,
+    page = DZ_Seed_Page3,
+    translation = DZ_Hearing_Seed2,
+}
+
+option DefinitiveZombies.Hearing_Seed2_Effect {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DZ_Seed_Page3,
+    translation = DZ_Hearing_Seed2_Effect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Hearing_Seed3 {
+    type = double,
+    min = 0.00,
+    max = 100.00,
+    default = 25.00,
+    page = DZ_Seed_Page3,
+    translation = DZ_Hearing_Seed3,
+}
+
+option DefinitiveZombies.Hearing_Seed3_Effect {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DZ_Seed_Page3,
+    translation = DZ_Hearing_Seed3_Effect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
+option DefinitiveZombies.Hearing_Seed4 {
+    type = double,
+    min = 0.00,
+    max = 100.00,
+    default = 25.00,
+    page = DZ_Seed_Page3,
+    translation = DZ_Hearing_Seed4,
+}
+
+option DefinitiveZombies.Hearing_Seed4_Effect {
+    type = enum,
+    numValues = 11,
+    default = 6,
+    page = DZ_Seed_Page3,
+    translation = DZ_Hearing_Seed4_Effect,
+    valueTranslation = DefinitiveZombies_Effects,
+}
+
