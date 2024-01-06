@@ -190,7 +190,7 @@ function ZombieState:_update_zombie_random_modifier()
 		
 		for stat_name, value in pairs(DZ_ZOMBIE_STATS) do
 				self.zombie_random_modifier[stat_name] = {}
-				for i=1,4 do
+				for i=1,5 do
 						self.zombie_random_modifier[stat_name]["Seed" .. i] = {}
 				end
 				-- Give the seeds value which do not do anything
@@ -201,7 +201,9 @@ function ZombieState:_update_zombie_random_modifier()
 				self.zombie_random_modifier[stat_name]["Seed3"]["seed_chance"] = 100
 				self.zombie_random_modifier[stat_name]["Seed3"]["seed_effect"] = 0
 				self.zombie_random_modifier[stat_name]["Seed4"]["seed_chance"] = 100
-				self.zombie_random_modifier[stat_name]["Seed4"]["seed_effect"] = 0				
+				self.zombie_random_modifier[stat_name]["Seed4"]["seed_effect"] = 0			
+				self.zombie_random_modifier[stat_name]["Seed5"]["seed_chance"] = 100
+				self.zombie_random_modifier[stat_name]["Seed5"]["seed_effect"] = 0								
 		end
 		
 		-- Calculate the seed chance
@@ -210,19 +212,21 @@ function ZombieState:_update_zombie_random_modifier()
 				local interval2 = getSandboxOptions():getOptionByName("DefinitiveZombies." .. stat_name .. "_Seed2"):getValue()
 				local interval3 = getSandboxOptions():getOptionByName("DefinitiveZombies." .. stat_name .. "_Seed3"):getValue()
 				local interval4 = getSandboxOptions():getOptionByName("DefinitiveZombies." .. stat_name .. "_Seed4"):getValue()
+				local interval5 = getSandboxOptions():getOptionByName("DefinitiveZombies." .. stat_name .. "_Seed5"):getValue()
 				
 				-- Error check to prevent a divide by 0 error in case the user sets all seed_chance to 0
-				if interval1 > 0 or interval2 > 0 or interval3 > 0 or interval4 > 0 then
+				if interval1 > 0 or interval2 > 0 or interval3 > 0 or interval4 > 0 or interval5> 0 then
 
-						--Normalise the weights
-						local total_interval = interval1 + interval2 + interval3 + interval4
+						--Normalise the weights,  using default settings, interval1 = 0.2, interval2 = 0.4, etc. 
+						local total_interval = interval1 + interval2 + interval3 + interval4 + interval5
 						self.zombie_random_modifier[stat_name]["Seed1"]["seed_chance"] = interval1/total_interval
 						self.zombie_random_modifier[stat_name]["Seed2"]["seed_chance"] = interval2/total_interval + self.zombie_random_modifier[stat_name]["Seed1"]["seed_chance"]
 						self.zombie_random_modifier[stat_name]["Seed3"]["seed_chance"] = interval3/total_interval + self.zombie_random_modifier[stat_name]["Seed2"]["seed_chance"]
 						self.zombie_random_modifier[stat_name]["Seed4"]["seed_chance"] = interval4/total_interval + self.zombie_random_modifier[stat_name]["Seed3"]["seed_chance"]
+						self.zombie_random_modifier[stat_name]["Seed5"]["seed_chance"] = interval5/total_interval + self.zombie_random_modifier[stat_name]["Seed4"]["seed_chance"]
 						
 						-- Calculate the effect of the seed
-						for i=1,4 do
+						for i=1,5 do
 								LOGGER("DefinitiveZombies." .. stat_name .. "_Seed" .. i .. "_Effect")
 								local seed_effect = getSandboxOptions():getOptionByName("DefinitiveZombies." .. stat_name .. "_Seed" .. i .. "_Effect"):getValue()
 								seed_effect = seed_effect - 6
@@ -246,6 +250,8 @@ function ZombieState:_update_zombie_random_modifier()
 				LOGGER("Seed3 Effect: " .. self.zombie_random_modifier[stat_name]["Seed3"]["seed_effect"])
 				LOGGER("Seed4: " .. self.zombie_random_modifier[stat_name]["Seed4"]["seed_chance"])
 				LOGGER("Seed4 Effect: " .. self.zombie_random_modifier[stat_name]["Seed4"]["seed_effect"])
+				LOGGER("Seed5: " .. self.zombie_random_modifier[stat_name]["Seed4"]["seed_chance"])
+				LOGGER("Seed5 Effect: " .. self.zombie_random_modifier[stat_name]["Seed4"]["seed_effect"])
 		end
 		
 end
@@ -350,6 +356,7 @@ function ZombieState:get_seed_effect(stat_name)
 		local seed2 = self.zombie_random_modifier[stat_name]["Seed2"]["seed_chance"]
 		local seed3 = self.zombie_random_modifier[stat_name]["Seed3"]["seed_chance"]
 		local seed4 = self.zombie_random_modifier[stat_name]["Seed4"]["seed_chance"]
+		local seed5 = self.zombie_random_modifier[stat_name]["Seed5"]["seed_chance"]
 		local seed_effect = 0
 		
 		local seed = ZombRandFloat(0, 1.0)
@@ -365,7 +372,9 @@ function ZombieState:get_seed_effect(stat_name)
 		if seed3 < seed and seed <= seed4 then
 				seed_effect = self.zombie_random_modifier[stat_name]["Seed4"]["seed_effect"]
 		end
-
+		if seed4 < seed and seed <= seed5 then
+				seed_effect = self.zombie_random_modifier[stat_name]["Seed5"]["seed_effect"]
+		end
 		return seed_effect
 end
 
